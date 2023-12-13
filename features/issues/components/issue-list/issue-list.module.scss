@@ -51,7 +51,10 @@
 }
 
 .pageInfo {
-  color: color.$gray-300;
+  /*  task fix-issue-list-pagination-color: changed colour 
+  from $gray-300 to  $gray-700 as per the Figma design
+  */
+  color: color.$gray-700;
   font: font.$text-sm-regular;
 }
 
