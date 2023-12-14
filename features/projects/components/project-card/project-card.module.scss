@@ -19,7 +19,10 @@
 
 .bottomContainer {
   padding: space.$s4 space.$s6;
-  border-top: 3px solid color.$gray-200;
+
+  // fix-project-card-divider-thickness changed border-top from 3px to 1px
+  // as per the Figma design
+  border-top: 1px solid color.$gray-200;
   display: flex;
   justify-content: flex-end;
 }
