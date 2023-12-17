@@ -91,6 +91,9 @@ export function SidebarNavigation() {
               isCollapsed={isSidebarCollapsed}
               onClick={() => toggleSidebar()}
               className={styles.collapseMenuItem}
+              iconRotation={
+                isSidebarCollapsed ? "rotate(180deg)" : "rotate(0deg)"
+              } // pass rotation based on isSidebarCollapsed state
             />
           </ul>
         </nav>
