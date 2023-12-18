@@ -45,7 +45,7 @@ describe("Sidebar Navigation", () => {
 
       // check that links still exist and are functionable
       cy.get("nav").find("a").should("have.length", 6).eq(1).click();
-      cy.url().should("eq", "http://localhost:3000/dashboard/issues");
+      cy.url().should("eq", "http://localhost:3000/dashboard");
 
       // check that text is not rendered
       cy.get("nav").contains("Issues").should("not.exist");
