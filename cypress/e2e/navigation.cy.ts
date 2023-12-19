@@ -52,6 +52,22 @@ describe("Sidebar Navigation", () => {
     });
   });
 
+  it("shows large logo when swicthing to landscape mode while navigation is collapsed", () => {
+    // collapse navigation
+    cy.get("nav").contains("Collapse").click({ force: true });
+
+    cy.get('img[src="/icons/logo-small.svg"]').should(
+      "have.css",
+      "display",
+      "none",
+    );
+    cy.get('img[src="/icons/logo-large.svg"]').should(
+      "have.css",
+      "display",
+      "block",
+    );
+  });
+
   context("mobile resolution", () => {
     beforeEach(() => {
       cy.viewport("iphone-8");
